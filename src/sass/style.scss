@@ -1,2 +1,45 @@
 @import "common/reset.scss";
 @import "common/common";
+
+.top-wrapper-inner {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  margin: fs(70) auto 0;
+  @include mq-max($bp) {
+    flex-flow: column;
+  }
+}
+
+.shadow,
+.shadow2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.shadow {
+  background: url("../img/bg.png");
+  background-repeat: repeat;
+  right: fs(-10);
+  bottom: fs(-10);
+  left: auto;
+  top: auto;
+}
+.shadow2 {
+  background: #fff;
+}
+
+@include mq-min(721px) {
+  .sp-only {
+    display: none;
+  }
+}
+@include mq-max(720px) {
+  .pc-only {
+    display: none;
+  }
+}
+
+@import "top/*";

@@ -1,0 +1,29 @@
+.top-time {
+  width: 100%;
+  flex: 1;
+  padding: fs(25);
+  box-sizing: border-box;
+
+  position: relative;
+
+  &-tit {
+    position: relative;
+    font-size: fs(19);
+    font-weight: 700;
+    color: #015db2;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &-items {
+    margin-top: fs(20);
+    position: relative;
+  }
+  p {
+    margin-top: fs(20);
+    font-size: fs(14);
+    line-height: 1.5;
+  }
+}

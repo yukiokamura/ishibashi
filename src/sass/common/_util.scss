@@ -1,0 +1,31 @@
+@function fs($point) {
+  @return ($point/10) * 1rem;
+}
+
+@mixin mq($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin mq-min($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin mq-max($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@function height($is_sp) {
+  @if $is_sp {
+    @return fs(40);
+  } @else {
+    @return fs(60);
+  }
+}
+
+$bp: 768px;

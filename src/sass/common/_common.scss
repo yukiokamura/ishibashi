@@ -1,5 +1,24 @@
-html,body{
+@import "_util";
+html,
+body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "palt";
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic";
+  font-size: 10px;
+  @include mq-max($bp) {
+    font-size: (10/375) * 100vw;
+  }
+  background: #f1fafd;
 }
+
+a {
+  transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+@import "header";
+@import "map";
+@import "footer";
