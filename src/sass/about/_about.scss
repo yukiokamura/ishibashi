@@ -1,0 +1,16 @@
+.about-tit {
+  font-size: fs(25);
+  padding: 0 fs(10) fs(5);
+  display: inline-block;
+  position: relative;
+  color: #015db2;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    height: 3px;
+    left: 0;
+    background: #4ca1ef;
+  }
+}

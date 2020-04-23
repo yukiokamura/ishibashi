@@ -1,5 +1,8 @@
 <footer>
   <div class="footer-wrap">
+    <a class="pagetop" href="#">
+      このページのトップへ
+    </a>
     <div class="footer-links">
       <?php
       global $pagelinks;

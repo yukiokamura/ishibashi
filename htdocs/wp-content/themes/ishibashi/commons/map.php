@@ -14,7 +14,7 @@
         </p>
         <p class="common-map-info-text-des">西鉄バス　土井営業所バス停前</p>
         <p class="common-map-info-text-des">JR香椎宇美線土井駅　徒歩5分</p>
-        <p class="common-map-info-text-des">※駐車場完備しております。</p>
+        <p class="common-map-info-text-des last-des">※駐車場完備しております。</p>
         <a href="https://goo.gl/maps/Vuk3Dyp1QZU2" target="_blank" class="common-map-info-text-btn">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/googlemap_button.png" alt="大きな地図でみる">
         </a>

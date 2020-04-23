@@ -24,8 +24,13 @@
     <div class="header-menu-inner">
       <?php
       global $pagelinks;
-      foreach($pagelinks as $links):?>
-      <a href="<?php echo $links['url']?>"><?php echo $links['name']?></a>
+      foreach($pagelinks as $key=>$links):
+        $is_active = strpos($links['url'],$_SERVER["REQUEST_URI"]) ? 'active' : '';
+        if($_SERVER["REQUEST_URI"] == '/' and $key != 0){
+          $is_active = '';
+        }
+      ?>
+      <a href="<?php echo $links['url']?>" class="<?php echo $is_active?>"><?php echo $links['name']?></a>
     <?php endforeach;?>
     </div>
   </div>

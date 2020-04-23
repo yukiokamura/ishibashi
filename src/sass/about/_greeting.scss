@@ -1,0 +1,111 @@
+.about-greeting {
+  text-align: center;
+  max-width: 960px;
+  margin: fs(160) auto;
+  &-contents {
+    margin-top: fs(80);
+    text-align: left;
+    background: #fff;
+    padding: fs(60);
+    &-inner {
+      width: 100%;
+      display: flex;
+    }
+    // 960 - 120 = 840
+    &-photo {
+      width: (320 / 840) * 100%;
+      img {
+        width: 100%;
+      }
+      &-des {
+        font-size: fs(17);
+        margin-top: fs(30);
+      }
+      &-name {
+        margin-top: fs(20);
+        font-weight: 400;
+        font-size: fs(27);
+      }
+    }
+
+    &-des {
+      width: 100%;
+      flex: 1;
+      margin-left: fs(60);
+      h3 {
+        color: #015db2;
+        p {
+          display: inline-block;
+          font-size: fs(28);
+          font-weight: 700;
+          padding: 0 0.2em 5px 0em;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-image: url("../img/about/dashed.png");
+            background-repeat: repeat-x;
+          }
+        }
+        br + p {
+          margin-top: fs(5);
+        }
+      }
+      &-des {
+        margin-top: fs(30);
+        p {
+          font-size: fs(16);
+          color: #5a5a5e;
+          line-height: (27/16);
+        }
+        p + p {
+          margin-top: fs(40 - 16 * 0.68);
+        }
+      }
+    }
+    &-meta {
+      display: flex;
+      width: 100%;
+      margin-top: fs(100);
+      &-inner {
+        width: 50%;
+        flex: 1;
+      }
+      &-inner + &-inner {
+        margin-left: fs(60);
+      }
+      &-tit {
+        text-align: center;
+        background: #4ca1ef;
+        border-radius: fs(5);
+        color: #fff;
+        font-size: fs(21);
+        width: 100%;
+        padding: fs(10) 0;
+        margin-bottom: fs(30);
+      }
+      &-des {
+        font-size: fs(16);
+        color: #5a5a5e;
+        line-height: (34/16);
+      }
+      &-list {
+        padding-left: 1em;
+        position: relative;
+        &:before {
+          content: "・";
+          position: absolute;
+          left: 0.25em;
+        }
+      }
+      &-item + &-item {
+        margin-top: fs(30);
+      }
+    }
+  }
+}

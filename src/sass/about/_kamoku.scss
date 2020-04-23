@@ -1,0 +1,41 @@
+.about-kakoku {
+  max-width: 960px - 120px;
+  margin: fs(80) auto 0;
+  text-align: center;
+
+  &-items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: fs(55);
+  }
+
+  &-item {
+    font-size: 0;
+    color: #686b74;
+    font-weight: 700;
+    width: 33.333% - (60/960) * 100% * (2/3);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    &-inner {
+      padding-top: 100%;
+      position: relative;
+      width: 100%;
+    }
+    p {
+      font-size: fs(18);
+      position: absolute;
+      height: 1em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+    }
+  }
+  &-item + &-item {
+    margin-left: (60/960) * 100%;
+  }
+}

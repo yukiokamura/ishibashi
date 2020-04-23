@@ -46,9 +46,17 @@
         font-size: fs(21);
         letter-spacing: 0.06em;
         margin-bottom: fs(20);
+        @include mq-max($bp) {
+          font-size: 15px;
+        }
       }
       &-des {
         font-size: fs(17);
+        &.last-des {
+          &:before {
+            content: "";
+          }
+        }
         &:before {
           content: "・";
         }
@@ -82,6 +90,9 @@
       &-text {
         width: 100%;
         margin: fs(20) 0;
+        &-des.last-des {
+          font-size: 12px;
+        }
         &-btn {
           display: none;
         }

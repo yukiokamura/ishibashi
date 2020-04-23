@@ -7,7 +7,9 @@
   left: 0;
   pointer-events: none;
   z-index: 99;
-
+  @include mq-max($bp) {
+    height: fs(60);
+  }
   &-bg {
     position: absolute;
     top: 0;
@@ -27,9 +29,21 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-    .header-scroll-logo,
+
     .header-scroll-menu {
+      @include mq-min($bp + 1px) {
+        opacity: 1;
+      }
+    }
+    .header-scroll-menuBtn,
+    .header-scroll-logo {
       opacity: 1;
+    }
+  }
+
+  &.motionNow {
+    .header-scroll-menuBtn {
+      pointer-events: none;
     }
   }
   &-logo {
@@ -46,6 +60,12 @@
     img {
       width: 100%;
     }
+
+    @include mq-max($bp) {
+      width: fs(150);
+      height: fs(20 * 1.5);
+      left: fs(20);
+    }
   }
 
   &-menu {
@@ -56,7 +76,30 @@
     align-items: center;
     margin-right: fs(30);
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: opacity 0s cubic-bezier(0.33, 1, 0.68, 1);
+    @include mq-max($bp) {
+      opacity: 0;
+      pointer-events: none;
+      &.active {
+        display: block;
+        width: 100%;
+        top: fs(60);
+        margin-right: 0;
+        background: #fff;
+        height: auto;
+        pointer-events: auto;
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        a {
+          display: block;
+          text-align: center;
+          padding: fs(10);
+        }
+        a + a {
+          margin-left: 0;
+        }
+      }
+    }
     a {
       font-size: fs(16);
       color: #015db2;
@@ -65,6 +108,54 @@
     }
     a + a {
       margin-left: fs(20);
+    }
+  }
+
+  &-menuBtn {
+    width: fs(20);
+    height: fs(15);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: fs(20);
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.2s;
+    @include mq-min($bp + 1px) {
+      display: none;
+    }
+    span {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #000;
+    }
+    &-open {
+      span {
+        transform-origin: right;
+        &:nth-child(2) {
+          top: 7px;
+        }
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+    }
+    &-close {
+      span {
+        left: 0;
+        right: 0;
+
+        transform-origin: left;
+        &:nth-child(1) {
+          bottom: 0;
+
+          transform: rotate(-45deg) scaleX(0);
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg) scaleX(0);
+        }
+      }
     }
   }
 }

@@ -80,6 +80,9 @@ header {
     font-size: 14.4px;
     padding: 7px 10px;
     font-weight: 700;
+    @include mq-max($bp) {
+      font-size: (12/375) * 100vw;
+    }
   }
   p + p {
     margin-left: 10px;
@@ -113,6 +116,11 @@ header {
       height: 100%;
       line-height: 65px;
       width: (100% / 6);
+      &.active {
+        &:after {
+          transform: scaleX(1);
+        }
+      }
       &:after {
         position: absolute;
         content: "";

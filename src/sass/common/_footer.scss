@@ -2,12 +2,27 @@ footer {
   background: #fff;
   margin-top: fs(55);
   padding-top: fs(50);
+  @include mq-max($bp) {
+    padding: 0;
+  }
 }
 
 .footer-wrap {
   max-width: 960px;
   margin: auto;
   text-align: center;
+  .pagetop {
+    display: none;
+    @include mq-max($bp) {
+      display: block;
+      background: #015db2;
+      padding: fs(10) 0;
+      text-align: center;
+      color: #fff;
+      font-size: fs(12);
+      text-decoration: none;
+    }
+  }
 }
 
 .footer {
@@ -29,6 +44,31 @@ footer {
     a + a {
       margin-left: fs(60);
     }
+
+    @include mq-max($bp) {
+      display: block;
+      text-align: left;
+      padding: 0 0;
+
+      a {
+        padding: fs(15) fs(20);
+        border-bottom: 2px solid #015db2;
+        position: relative;
+        &:after {
+          content: ">";
+          font-weight: bold;
+          height: 1em;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          right: fs(20);
+        }
+      }
+      a + a {
+        margin-left: 0;
+      }
+    }
   }
   &-baseInfo {
     text-align: left;
@@ -42,6 +82,9 @@ footer {
     img {
       width: fs(150 * 0.5);
     }
+    @include mq-max($bp) {
+      display: none;
+    }
   }
   &-copyrights {
     margin-top: fs(40);
@@ -49,5 +92,9 @@ footer {
     color: #fff;
     padding: fs(15);
     text-align: right;
+    @include mq-max($bp) {
+      margin-top: 0;
+      text-align: center;
+    }
   }
 }

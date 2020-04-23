@@ -1,0 +1,27 @@
+.about-shoukai {
+  text-align: center;
+  margin: fs(160) auto 0;
+  max-width: 960px;
+  text-align: center;
+  &-items {
+    display: flex;
+    margin-top: fs(80);
+  }
+
+  &-item {
+    width: (100/3) * 100%;
+    flex: 1;
+    img {
+      width: 100%;
+    }
+    &-tit {
+      margin-top: fs(40);
+      font-size: fs(18);
+      font-weight: 700;
+      color: #015db2;
+    }
+  }
+  &-item + &-item {
+    margin-left: (60/960) * 100%;
+  }
+}

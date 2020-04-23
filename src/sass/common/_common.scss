@@ -6,6 +6,7 @@ body {
   font-feature-settings: "palt";
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic";
   font-size: 10px;
+  letter-spacing: 0.06em;
   @include mq-max($bp) {
     font-size: (10/375) * 100vw;
   }
@@ -22,3 +23,28 @@ a {
 @import "header";
 @import "map";
 @import "footer";
+
+.page-tit {
+  max-width: 960px;
+  margin: fs(80) auto fs(80);
+  h1 {
+    color: #015db2;
+    font-size: fs(26);
+    span {
+      color: #00b7ee;
+      text-transform: uppercase;
+      padding-left: fs(20);
+      position: relative;
+      &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: #686b74;
+        display: block;
+        position: absolute;
+        left: fs(10);
+        top: 0;
+      }
+    }
+  }
+}
