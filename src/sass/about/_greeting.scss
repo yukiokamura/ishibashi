@@ -2,29 +2,50 @@
   text-align: center;
   max-width: 960px;
   margin: fs(160) auto;
+  @include mq-max($bp) {
+    margin: fs(50) fs(20) 0;
+  }
   &-contents {
     margin-top: fs(80);
     text-align: left;
     background: #fff;
     padding: fs(60);
+    @include mq-max($bp) {
+      margin-top: fs(30);
+      padding: fs(20);
+    }
     &-inner {
       width: 100%;
       display: flex;
+      @include mq-max($bp) {
+        display: block;
+      }
     }
     // 960 - 120 = 840
     &-photo {
       width: (320 / 840) * 100%;
+      @include mq-max($bp) {
+        width: 100%;
+      }
       img {
         width: 100%;
       }
       &-des {
         font-size: fs(17);
         margin-top: fs(30);
+        @include mq-max($bp) {
+          font-size: fs(15);
+          margin-top: fs(15);
+        }
       }
       &-name {
         margin-top: fs(20);
         font-weight: 400;
         font-size: fs(27);
+        @include mq-max($bp) {
+          font-size: fs(15);
+          margin-top: fs(5);
+        }
       }
     }
 
@@ -32,6 +53,10 @@
       width: 100%;
       flex: 1;
       margin-left: fs(60);
+      @include mq-max($bp) {
+        margin-left: 0;
+        margin-top: fs(30);
+      }
       h3 {
         color: #015db2;
         p {
@@ -40,6 +65,9 @@
           font-weight: 700;
           padding: 0 0.2em 5px 0em;
           position: relative;
+          @include mq-max($bp) {
+            font-size: fs(20);
+          }
           &:before {
             position: absolute;
             content: "";
@@ -58,13 +86,22 @@
       }
       &-des {
         margin-top: fs(30);
+        @include mq-max($bp) {
+          font-size: fs(15);
+        }
         p {
           font-size: fs(16);
           color: #5a5a5e;
           line-height: (27/16);
+          @include mq-max($bp) {
+            font-size: fs(14);
+          }
         }
         p + p {
           margin-top: fs(40 - 16 * 0.68);
+          @include mq-max($bp) {
+            margin-top: fs(10);
+          }
         }
       }
     }
@@ -72,12 +109,23 @@
       display: flex;
       width: 100%;
       margin-top: fs(100);
+      @include mq-max($bp) {
+        display: block;
+        margin-top: fs(30);
+      }
       &-inner {
         width: 50%;
         flex: 1;
+        @include mq-max($bp) {
+          width: 100%;
+        }
       }
       &-inner + &-inner {
         margin-left: fs(60);
+        @include mq-max($bp) {
+          margin-left: 0;
+          margin-top: fs(15);
+        }
       }
       &-tit {
         text-align: center;
@@ -88,11 +136,17 @@
         width: 100%;
         padding: fs(10) 0;
         margin-bottom: fs(30);
+        @include mq-max($bp) {
+          margin-bottom: fs(15);
+        }
       }
       &-des {
         font-size: fs(16);
         color: #5a5a5e;
         line-height: (34/16);
+        @include mq-max($bp) {
+          font-size: fs(12);
+        }
       }
       &-list {
         padding-left: 1em;

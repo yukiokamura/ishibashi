@@ -1,0 +1,49 @@
+.other-div {
+  max-width: 960px;
+  margin: fs(80) auto 0;
+  display: flex;
+
+  @include mq-max($bp) {
+    margin: fs(50) fs(20) 0;
+    display: block;
+  }
+  &-sub {
+    width: (518/960) * 100%;
+    @include mq-max($bp) {
+      width: 100%;
+      margin-top: fs(30);
+    }
+  }
+  &-main {
+    width: 100%;
+    flex: 1;
+    margin-right: fs(30);
+    @include mq-max($bp) {
+      margin-right: 0;
+    }
+  }
+  &-logo {
+    width: auto;
+    border-bottom: 1px dotted #015db2;
+    padding-bottom: fs(30);
+    text-align: center;
+    img {
+      width: calc(100% - #{fs(20)});
+    }
+  }
+
+  &-tel {
+    font-size: fs(30);
+    // line-height: (46/30);
+    color: #686b74;
+    text-align: center;
+    margin-top: fs(40);
+    p + p {
+      margin-top: fs(25);
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

@@ -24,6 +24,7 @@ a {
 @import "map";
 @import "footer";
 
+@import "other";
 .page-tit {
   max-width: 960px;
   margin: fs(80) auto fs(80);
@@ -45,6 +46,12 @@ a {
         left: fs(10);
         top: 0;
       }
+    }
+  }
+  @include mq-max($bp) {
+    margin: fs(50) fs(20) fs(15);
+    h1 {
+      font-size: fs(14);
     }
   }
 }

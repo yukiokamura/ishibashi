@@ -1,0 +1,260 @@
+.medical-contents {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  @include mq-max($bp) {
+    margin-top: fs(60);
+  }
+  &-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: fs(60);
+    border-bottom: 1px dotted #015db2;
+    padding-bottom: fs(60);
+    @include mq-max($bp) {
+      margin-top: fs(10);
+      padding-bottom: fs(30);
+      flex-wrap: wrap;
+      &:after {
+        content: "";
+        display: block;
+        width: (100% / 3);
+        margin-left: fs(20);
+      }
+    }
+    a {
+      display: block;
+      width: (100% / 5);
+      color: #015db2;
+      @include mq-max($bp) {
+        width: (100% / 3);
+        margin-top: fs(20);
+      }
+      img {
+        width: 100%;
+        @include mq-max($bp) {
+          width: 80%;
+        }
+      }
+      p {
+        font-size: fs(16);
+        font-weight: 700;
+        @include mq-max($bp) {
+          font-size: fs(14);
+          margin-top: fs(5);
+        }
+      }
+    }
+    a + a {
+      margin-left: fs(60);
+      @include mq-max($bp) {
+        margin-left: fs(20);
+      }
+    }
+  }
+  &-items {
+    padding: fs(60);
+    background: #fff;
+    margin: fs(60) auto 0;
+    max-width: 960px;
+    box-sizing: border-box;
+    @include mq-max($bp) {
+      padding: fs(20);
+      margin: fs(20) fs(20);
+    }
+  }
+  &-item {
+    & + & {
+      margin-top: fs(60);
+    }
+    h3 {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: fs(20);
+      img {
+        height: fs(100);
+        margin-right: fs(15);
+      }
+      @include mq-max($bp) {
+        font-size: fs(15);
+        img {
+          height: fs(80);
+          margin-right: fs(5);
+        }
+      }
+    }
+
+    &-contents {
+      margin-top: fs(45);
+      @include mq-max($bp) {
+        margin-top: fs(30);
+      }
+      &-tit {
+        font-size: fs(17);
+        color: #015db2;
+        font-weight: 700;
+        @include mq-max($bp) {
+          font-size: fs(15);
+        }
+      }
+      &-main-des {
+        margin-top: fs(15);
+        font-size: fs(15);
+        line-height: 1.5;
+        @include mq-max($bp) {
+          font-size: fs(14);
+          margin-top: fs(10);
+        }
+      }
+
+      &-des {
+        font-size: fs(15);
+        color: #686b74;
+        margin-top: fs(15);
+        @include mq-max($bp) {
+          font-size: fs(12);
+          margin-top: fs(10);
+        }
+      }
+      &-des + &-tit {
+        margin-top: fs(30);
+      }
+      &-img {
+        // text-align: center;
+        margin-bottom: fs(30);
+        width: 50%;
+        @include mq-max($bp) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      &.flex {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        .medical-contents-item-contents-wrap {
+          margin-left: fs(15);
+          flex: 1;
+        }
+        @include mq-max($bp) {
+          display: block;
+          .medical-contents-item-contents-wrap {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.medical-setsubi {
+  margin: fs(80) auto 0;
+  text-align: center;
+  max-width: 960px;
+  @include mq-max($bp) {
+    margin: fs(60) fs(20) 0;
+  }
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: fs(30);
+    @include mq-max($bp) {
+      margin-top: fs(15);
+    }
+  }
+  &-item {
+    width: calc(#{(100% / 3)} - #{fs(40)});
+    margin-top: fs(30);
+    border-radius: fs(30);
+    overflow: hidden;
+    @include mq-max($bp) {
+      border-radius: fs(10);
+      width: calc(#{(100% / 2)} - #{fs(5)});
+      margin-top: fs(10);
+    }
+    img {
+      width: 100%;
+    }
+    &:nth-child(n + 2) {
+      margin-left: fs(30);
+      @include mq-max($bp) {
+        margin-left: fs(10);
+      }
+    }
+    &:nth-child(2n + 1) {
+      @include mq-max($bp) {
+        margin-left: fs(0);
+      }
+    }
+    &:nth-child(4) {
+      margin-left: 0;
+      @include mq-max($bp) {
+        margin-left: fs(10);
+      }
+    }
+  }
+}
+
+.medical-onegai {
+  margin: fs(80) auto 0;
+  text-align: center;
+  max-width: 960px;
+  @include mq-max($bp) {
+    margin: fs(60) fs(20) 0;
+  }
+  &-contents {
+    margin-top: fs(30);
+    &-tit {
+      font-size: fs(17);
+      font-weight: 700;
+      @include mq-max($bp) {
+        font-size: fs(15);
+      }
+      & + & {
+        margin-top: fs(30);
+        @include mq-max($bp) {
+          margin-top: fs(20);
+        }
+      }
+    }
+    &-des {
+      font-size: fs(15);
+      // margin-top: fs(10);
+      line-height: 1.5;
+      text-align: left;
+      @include mq-max($bp) {
+        .pc_only {
+          display: none;
+        }
+      }
+      @include mq-min($bp + 1px) {
+        .sp_only {
+          display: none;
+        }
+      }
+    }
+    &-flex {
+      display: flex;
+      margin-top: fs(30);
+      justify-content: center;
+      @include mq-max($bp) {
+        display: block;
+        margin-top: fs(10);
+      }
+    }
+  }
+
+  a {
+    display: block;
+    // width: 300px;
+    margin: auto;
+    @include mq-max($bp) {
+      margin-top: fs(15);
+    }
+  }
+}

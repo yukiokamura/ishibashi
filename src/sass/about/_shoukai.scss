@@ -3,14 +3,24 @@
   margin: fs(160) auto 0;
   max-width: 960px;
   text-align: center;
+  @include mq-max($bp) {
+    margin: fs(50) fs(20) 0;
+  }
   &-items {
     display: flex;
     margin-top: fs(80);
+    @include mq-max($bp) {
+      margin-top: fs(30);
+      display: block;
+    }
   }
 
   &-item {
     width: (100/3) * 100%;
     flex: 1;
+    @include mq-max($bp) {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
@@ -19,9 +29,17 @@
       font-size: fs(18);
       font-weight: 700;
       color: #015db2;
+      @include mq-max($bp) {
+        margin-top: fs(5);
+        font-size: fs(12);
+      }
     }
   }
   &-item + &-item {
     margin-left: (60/960) * 100%;
+    @include mq-max($bp) {
+      margin-left: 0;
+      margin-top: fs(15);
+    }
   }
 }
