@@ -1,0 +1,47 @@
+.infomation-latest {
+  width: 100%;
+  flex: 1;
+  margin-left: fs(70);
+  @include mq-max($bp) {
+    display: none;
+  }
+  &-tit {
+    margin-bottom: fs(40);
+    text-align: center;
+    font-weight: 700;
+    font-size: fs(17);
+  }
+  &-item {
+    color: inherit;
+    text-decoration: none;
+    padding: fs(40) 0;
+    border-top: 1px dashed #015db2;
+    display: block;
+    &:last-child {
+      border-bottom: 1px dashed #015db2;
+    }
+    &:hover {
+      opacity: 1;
+      .infomation-latest-item-date,
+      .infomation-latest-item-tit {
+        opacity: 0.3;
+      }
+    }
+    .infomation-latest-item-date,
+    .infomation-latest-item-tit {
+      transition: opacity 0.5s;
+    }
+    &-date {
+      font-size: fs(10);
+      color: #015db2;
+      margin-bottom: fs(10);
+    }
+    &-tit {
+      color: #5a5a5e;
+      font-size: fs(14);
+      text-decoration: underline;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+  }
+}

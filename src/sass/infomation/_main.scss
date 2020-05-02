@@ -1,0 +1,9 @@
+.infomation-wrap {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  @include mq-max($bp) {
+    display: block;
+    margin: 0 fs(20);
+  }
+}

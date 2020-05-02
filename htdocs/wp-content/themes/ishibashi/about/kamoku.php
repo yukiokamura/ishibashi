@@ -5,7 +5,7 @@
       <div class="about-kakoku-item-inner"><p>整形外科</p></div>
     </div>
     <div class="about-kakoku-item">
-      <div class="about-kakoku-item-inner"><p>リハビリ<br class="sp_only">ステーション科</p></div>
+      <div class="about-kakoku-item-inner"><p>リハビリ<br class="sp_only">テーション科</p></div>
     </div>
     <div class="about-kakoku-item">
       <div class="about-kakoku-item-inner"><p>リウマチ科</p></div>

@@ -3,8 +3,10 @@
 
 global $pagelinks;
 $name;
+$u = strstr($_SERVER['REQUEST_URI'],'?',true);
+if($u == '')$u = $_SERVER['REQUEST_URI'];
 foreach($pagelinks as $links){
-  if(strpos($links['url'],$_SERVER["REQUEST_URI"])){
+  if(strpos($links['url'],$u)){
     $name = $links;
   }
 }

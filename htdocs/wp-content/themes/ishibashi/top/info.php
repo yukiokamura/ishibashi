@@ -12,14 +12,14 @@
       while ( $query->have_posts() ) :
         $query->the_post();
     ?>
-    <div class="top-info-item">
+    <a class="top-info-item" href="/infomation/?pid=<?php the_ID()?>">
       <div class="top-info-item-date">
         <?php echo the_time('y.m.d')?>
       </div>
       <div class="top-info-item-tit">
         <?php echo get_the_title()?>
       </div>
-    </div>
+    </a>
   <?php endwhile;wp_reset_postdata();endif;?>
   </div>
 </div>

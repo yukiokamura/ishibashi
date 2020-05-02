@@ -1,0 +1,78 @@
+.infomation-contents {
+  width: (670/960) * 100%;
+  box-sizing: border-box;
+  @include mq-max($bp) {
+    width: 100%;
+  }
+  &-item {
+    padding: fs(40);
+    background: #fff;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    @include mq-max($bp) {
+      padding: fs(20);
+    }
+    & + & {
+      margin-top: fs(60);
+      @include mq-max($bp) {
+        margin-top: fs(20);
+      }
+    }
+    &-date {
+      font-size: fs(12);
+      color: #015db2;
+      @include mq-max($bp) {
+        font-size: fs(10);
+      }
+    }
+    &-tit {
+      font-size: fs(18);
+      color: #5a5a5e;
+      text-decoration: underline;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-top: fs(10);
+      @include mq-max($bp) {
+        font-size: fs(14);
+      }
+    }
+    &-des {
+      font-size: fs(14);
+      line-height: (32/14);
+      margin-top: fs(20);
+      @include mq-max($bp) {
+        font-size: fs(12);
+      }
+    }
+  }
+}
+
+.infomation-page {
+  display: flex;
+  justify-content: center;
+  margin-top: fs(80);
+  @include mq-max($bp) {
+    margin-top: fs(50);
+  }
+  a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #0850a1;
+    color: #fff;
+    font-size: fs(25);
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #a7c9ef;
+    &.current {
+      background-color: #0850a1;
+      pointer-events: none;
+    }
+  }
+  a + a {
+    margin-left: fs(20);
+  }
+}

@@ -38,7 +38,7 @@
           <p class="about-greeting-contents-meta-tit">専門医</p>
           <p class="about-greeting-contents-meta-des  about-greeting-contents-meta-list">日本整形外科学会認定専門医</p>
           <p class="about-greeting-contents-meta-des  about-greeting-contents-meta-list">日本整形外科学会認定スポーツ医</p>
-          <p class="about-greeting-contents-meta-des  about-greeting-contents-meta-list">日本リウマチ学会認定専門医</p>
+          <p class="about-greeting-contents-meta-des  about-greeting-contents-meta-list">日本整形外科学会認定リウマチ医</p>
           
           
         </div>

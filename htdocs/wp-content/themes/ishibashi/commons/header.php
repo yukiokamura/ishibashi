@@ -24,9 +24,12 @@
     <div class="header-menu-inner">
       <?php
       global $pagelinks;
+      // $num = strpos($_SERVER['REQUEST_URI'],'?');
+      $u = strstr($_SERVER['REQUEST_URI'],'?',true);
+      if($u == '')$u = $_SERVER['REQUEST_URI'];
       foreach($pagelinks as $key=>$links):
-        $is_active = strpos($links['url'],$_SERVER["REQUEST_URI"]) ? 'active' : '';
-        if($_SERVER["REQUEST_URI"] == '/' and $key != 0){
+        $is_active = strpos($links['url'],$u) ? 'active' : '';
+        if($u == '/' and $key != 0){
           $is_active = '';
         }
       ?>

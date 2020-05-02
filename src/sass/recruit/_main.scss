@@ -1,0 +1,89 @@
+.recruit-main {
+  max-width: 960px;
+  margin: fs(60) auto;
+  background: #fff;
+  padding: fs(70);
+  box-sizing: border-box;
+  @include mq-max($bp) {
+    padding: fs(20);
+    margin: fs(30) fs(20);
+  }
+  &-inner {
+    text-align: center;
+  }
+  .recruit_none {
+    margin-top: fs(60);
+    font-size: fs(20);
+    font-weight: 700;
+    color: #686b74;
+    @include mq-max($bp) {
+      font-size: fs(14);
+      margin-top: fs(30);
+    }
+  }
+  .about-tit {
+    margin-bottom: fs(100);
+    @include mq-max($bp) {
+      margin-bottom: fs(30);
+    }
+  }
+  &-item {
+    text-align: left;
+    & + & {
+      margin-top: fs(30);
+    }
+  }
+  &-tit {
+    font-size: fs(20);
+    color: #015db2;
+    font-weight: 700;
+    position: relative;
+    padding-left: fs(10);
+    line-height: 1.5;
+    margin-bottom: fs(5);
+    @include mq-max($bp) {
+      font-size: fs(14);
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background: #87c4fc;
+      top: 0;
+    }
+    &.not_recruit {
+      &:after {
+        content: "※現在は募集していません。";
+        font-size: fs(12);
+        color: #686b74;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  &-contents {
+    display: flex;
+    padding: fs(15) 0;
+    border-top: 1px dashed #636363;
+    p {
+      line-height: 1.5;
+      font-size: fs(17);
+      color: #636363;
+      &:first-child {
+        width: 100px;
+        @include mq-max($bp) {
+          width: 80px;
+        }
+      }
+      &:nth-child(2) {
+        flex: 1;
+      }
+      @include mq-max($bp) {
+        font-size: fs(12);
+      }
+    }
+  }
+}

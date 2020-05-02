@@ -25,6 +25,8 @@
     height: fs(60);
     align-items: center;
     border-bottom: 1px dotted #5a5a5e;
+    text-decoration: none;
+    color: inherit;
     @include mq-max($bp) {
       &:nth-child(n + 5) {
         display: none;
