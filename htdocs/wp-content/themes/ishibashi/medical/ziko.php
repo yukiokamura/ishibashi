@@ -1,4 +1,4 @@
-<div class="medical-contents-item" id="4">
+<div class="medical-contents-item" id="5">
   <h3>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/medical/medi06.png">
     <p>交通事故の症状</p>
