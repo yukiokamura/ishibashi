@@ -12,13 +12,13 @@
     text-align: center;
   }
   .recruit_none {
-    margin-top: fs(60);
+    // margin-top: fs(60);
     font-size: fs(20);
     font-weight: 700;
     color: #686b74;
     @include mq-max($bp) {
       font-size: fs(14);
-      margin-top: fs(30);
+      // margin-top: fs(30);
     }
   }
   .about-tit {
