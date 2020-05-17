@@ -25,7 +25,7 @@
         <div class="top-time-item">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/time.jpg">
         </div>
-        <p>木曜午後は16:00まで<br>土曜は8:40~14:00<br>休診日　日曜、祝日、年末年始</p>
+        <p>木曜午後は16:20まで<br>土曜は8:40~14:00<br>休診日　日曜、祝日、年末年始</p>
       </div>
     </div>
   </div>

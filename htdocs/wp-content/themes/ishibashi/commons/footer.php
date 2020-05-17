@@ -16,7 +16,7 @@
           813-0032　<a href="https://goo.gl/maps/Vuk3Dyp1QZU2" target="_blank">福岡市東区土井1-1-3</a><br>TEL 092-691-1031 / FAX 092-691-1032</p>
       </div>
       <div class="footer-baseInfo-item">
-        <p>平日 8:30-12:00 / 14:00-17:30<br>土	8:30-12:00 <br>休診日	日曜日、祝日、年末年始</p>
+        <p>月火水金 8:50-12:20 / 14:00-17:40<br>木 8:50-12:20 / 14:00-16:20<br>土	8:50-14:00 <br>休診日	日曜日、祝日、年末年始</p>
       </div>
       <div class="footer-baseInfo-item">
       <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pagetop.png"></a></div>

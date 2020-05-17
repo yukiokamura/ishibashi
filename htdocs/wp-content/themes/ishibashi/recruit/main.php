@@ -4,7 +4,7 @@
     <?php if( have_rows('recruit_options', 'option') ):
       while( have_rows('recruit_options', 'option') ): the_row();?>
       <div class="recruit-main-item">
-        <?php $activeClass = get_sub_field('recruit_is') ? '' : 'not_recruit'?>
+        <?php $activeClass = get_sub_field('recruit_is') == 'boshu' ? '' : 'not_recruit'?>
         <div class="recruit-main-tit <?php echo $activeClass;?>">
           <?php the_sub_field('recruit_title');?>
         </div>
